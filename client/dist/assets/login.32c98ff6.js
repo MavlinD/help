@@ -19,7 +19,7 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { b as QCardSection, Q as QInput, a as QCard } from "./QCard.ada68c8f.js";
 import { j as createComponent, E as ref, u as provide, x as onMounted, n as h, s as hSlot, t as getCurrentInstance, ah as stopAndPrevent, H as nextTick, aH as addFocusFn, aF as formKey, aM as useAlignProps, aN as useAlign, m as computed, U as useQuasar, S as useRouter, aO as useRoute, J as reactive, o as openBlock, aw as createElementBlock, i as createBaseVNode, V as createVNode, w as withCtx, $ as isRef, Y as unref, Z as QIcon, W as QBtn } from "./vendor.cde5035b.js";
-import { s as setTitle, T as Transport } from "./index.03372a61.js";
+import { s as setTitle, T as Transport } from "./index.bee85546.js";
 var QForm = createComponent({
   name: "QForm",
   props: {

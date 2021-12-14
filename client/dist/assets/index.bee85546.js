@@ -107,7 +107,7 @@ const setTitle = (title) => {
   const brand = "FAQ \u041C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A";
   document.title = `${title ? title : brand}`;
 };
-const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.51e735c4.js"), ["assets/About.51e735c4.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.cb8b057d.js"), ["assets/Articles.cb8b057d.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.9bca4a30.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.40d883f9.js"), ["assets/Home.40d883f9.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.b590dc43.js"), ["assets/Search.b590dc43.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.9bca4a30.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.fd6c2be4.js"), ["assets/login.fd6c2be4.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
+const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.f1bbc0c2.js"), ["assets/About.f1bbc0c2.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.b888691c.js"), ["assets/Articles.b888691c.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.dca96aa5.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.aebcbaeb.js"), ["assets/Home.aebcbaeb.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.19339f94.js"), ["assets/Search.19339f94.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.dca96aa5.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.32c98ff6.js"), ["assets/login.32c98ff6.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
 let meta = {
   home: {
     requiresAuth: true,
@@ -141,7 +141,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Article.5b7f7edd.js"), true ? ["assets/Article.5b7f7edd.js","assets/vendor.cde5035b.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.4bc929e6.js","assets/article.c2c2b760.js"] : void 0)
+  component: () => __vitePreload(() => import("./Article.29824407.js"), true ? ["assets/Article.29824407.js","assets/vendor.cde5035b.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.ccafabd8.js","assets/article.6046ca39.js"] : void 0)
 }, {
   name: "category",
   path: "/category/:slug",
@@ -149,7 +149,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Category.7975a274.js"), true ? ["assets/Category.7975a274.js","assets/vendor.cde5035b.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.9bca4a30.js"] : void 0)
+  component: () => __vitePreload(() => import("./Category.8d8a4e8b.js"), true ? ["assets/Category.8d8a4e8b.js","assets/vendor.cde5035b.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.dca96aa5.js"] : void 0)
 }, {
   name: "article-edit",
   path: "/article/edit/:slug",
@@ -157,20 +157,20 @@ routes.push({
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleEdit.30f7476a.js"), true ? ["assets/ArticleEdit.30f7476a.js","assets/ArticleTpl.1bb5b193.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/article.c2c2b760.js","assets/ArticleDelete.4bc929e6.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleEdit.f0d06d8c.js"), true ? ["assets/ArticleEdit.f0d06d8c.js","assets/ArticleTpl.0e026d20.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/article.6046ca39.js","assets/ArticleDelete.ccafabd8.js"] : void 0)
 }, {
   name: "article-add",
   path: "/article/add",
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleAdd.ce20bc3f.js"), true ? ["assets/ArticleAdd.ce20bc3f.js","assets/ArticleTpl.1bb5b193.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.20a2ccec.js","assets/default.532363f2.css","assets/article.c2c2b760.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleAdd.63871202.js"), true ? ["assets/ArticleAdd.63871202.js","assets/ArticleTpl.0e026d20.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.f6fc27be.js","assets/default.532363f2.css","assets/article.6046ca39.js"] : void 0)
 }, {
   path: "/:catchAll(.*)*",
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Error404.afd9f5dc.js"), true ? ["assets/Error404.afd9f5dc.js","assets/vendor.cde5035b.js"] : void 0)
+  component: () => __vitePreload(() => import("./Error404.40880eb7.js"), true ? ["assets/Error404.40880eb7.js","assets/vendor.cde5035b.js"] : void 0)
 });
 function routerGuard(router2, store2) {
   router2.beforeEach((to, from, next) => {

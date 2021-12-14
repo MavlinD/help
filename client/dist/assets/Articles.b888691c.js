@@ -1,7 +1,7 @@
-import { Q as QPage, _ as _sfc_main$2 } from "./default.20a2ccec.js";
-import { _ as _sfc_main$1 } from "./ArticlesList.9bca4a30.js";
+import { Q as QPage, _ as _sfc_main$2 } from "./default.f6fc27be.js";
+import { _ as _sfc_main$1 } from "./ArticlesList.dca96aa5.js";
 import { T as useStore, o as openBlock, f as createBlock, w as withCtx, V as createVNode, Y as unref, i as createBaseVNode } from "./vendor.cde5035b.js";
-import { s as setTitle } from "./index.03372a61.js";
+import { s as setTitle } from "./index.bee85546.js";
 import "./QCard.ada68c8f.js";
 const _hoisted_1 = /* @__PURE__ */ createBaseVNode("h2", { class: "q-ml-xl text-primary" }, "\u0421\u0442\u0430\u0442\u044C\u0438", -1);
 const _sfc_main = {

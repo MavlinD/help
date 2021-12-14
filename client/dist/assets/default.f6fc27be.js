@@ -19,7 +19,7 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { j as createComponent, k as inject, l as layoutKey, p as pageContainerKey, m as computed, n as h, s as hSlot, t as getCurrentInstance, u as provide, v as watch, x as onMounted, y as onBeforeUnmount, z as noop, A as getScrollTarget, B as listenOpts, C as getVerticalScrollPosition, D as getHorizontalScrollPosition, E as ref, F as isRuntimeSsrPreHydration, H as nextTick, I as getScrollbarWidth, J as reactive, K as hMergeSlot, M as useDarkProps, O as useDark, R as hUniqueSlot, S as useRouter, T as useStore, U as useQuasar, r as resolveComponent, o as openBlock, f as createBlock, w as withCtx, V as createVNode, W as QBtn, X as createCommentVNode, Y as unref, Z as QIcon, i as createBaseVNode, _ as withKeys, $ as isRef, a0 as QTooltip, a1 as QAvatar, a2 as QMenu, a3 as QItem, a4 as QItemSection, a5 as toDisplayString, a6 as createTextVNode, a7 as withModifiers, a8 as createDirective, a9 as client, aa as leftClick, ab as addEvt, ac as preventDraggable, ad as prevent, ae as stop, af as position, ag as cleanEvt, ah as stopAndPrevent, ai as clearSelection, aj as between, ak as debounce, al as withDirectives, am as setVerticalScrollPosition, an as setHorizontalScrollPosition, ao as History, ap as getEventPath, aq as hasScrollbar, ar as useModelToggleProps, as as useModelToggleEmits, at as useTimeout, au as useModelToggle, av as hDir, aw as createElementBlock, ax as renderList, ay as Ripple, az as Fragment, aA as Transition, aB as shallowReactive, aC as useRouterLinkProps, aD as vShow, aE as renderSlot } from "./vendor.cde5035b.js";
 import { Q as QInput, u as uid$1, a as QCard, b as QCardSection } from "./QCard.ada68c8f.js";
-import { i as isStaff, l as logout, a as isAuth } from "./index.03372a61.js";
+import { i as isStaff, l as logout, a as isAuth } from "./index.bee85546.js";
 var QPage = createComponent({
   name: "QPage",
   props: {
@@ -633,7 +633,7 @@ var QHeader = createComponent({
 const fasBomb = "M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z|0 0 512 512";
 const fasPlusCircle = "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z|0 0 512 512";
 const _hoisted_1$2 = /* @__PURE__ */ createTextVNode(" FAQ MacroBank v.3 ");
-const _hoisted_2 = { class: "YL__toolbar-input-container row no-wrap" };
+const _hoisted_2$1 = { class: "YL__toolbar-input-container row no-wrap" };
 const _hoisted_3 = /* @__PURE__ */ createBaseVNode("span", { class: "text-body2" }, "ctrl + ", -1);
 const _hoisted_4 = { class: "q-gutter-sm row items-center no-wrap" };
 const _hoisted_5 = /* @__PURE__ */ createTextVNode("\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0441\u0442\u0430\u0442\u044C\u044E");
@@ -726,7 +726,7 @@ const _sfc_main$5 = {
                 }),
                 createVNode(QSpace),
                 createVNode(QSpace),
-                createBaseVNode("div", _hoisted_2, [
+                createBaseVNode("div", _hoisted_2$1, [
                   createVNode(_component_GlobalEvents, {
                     onKeyup: withKeys(withModifiers(searchFocus, ["ctrl"]), ["enter"])
                   }, null, 8, ["onKeyup"]),
@@ -2102,6 +2102,7 @@ var QDrawer = createComponent({
   }
 });
 const _hoisted_1$1 = ["href"];
+const _hoisted_2 = ["href"];
 const _sfc_main$4 = {
   props: {
     isOpen: {
@@ -2139,7 +2140,6 @@ const _sfc_main$4 = {
       ]
     });
     return (_ctx, _cache) => {
-      const _component_router_link = resolveComponent("router-link");
       return openBlock(), createBlock(QDrawer, {
         "model-value": __props.isOpen,
         "show-if-above": "",
@@ -2170,15 +2170,10 @@ const _sfc_main$4 = {
                         }, 1024),
                         createVNode(QItemSection, null, {
                           default: withCtx(() => [
-                            createVNode(_component_router_link, {
-                              class: "text-body1",
-                              to: link.path
-                            }, {
-                              default: withCtx(() => [
-                                createTextVNode(toDisplayString(link.text), 1)
-                              ]),
-                              _: 2
-                            }, 1032, ["to"])
+                            createBaseVNode("a", {
+                              href: link.path,
+                              target: "_blank"
+                            }, toDisplayString(link.text), 9, _hoisted_1$1)
                           ]),
                           _: 2
                         }, 1024)
@@ -2210,7 +2205,7 @@ const _sfc_main$4 = {
                               createBaseVNode("a", {
                                 href: link.path,
                                 target: "_blank"
-                              }, toDisplayString(link.text), 9, _hoisted_1$1)
+                              }, toDisplayString(link.text), 9, _hoisted_2)
                             ]),
                             _: 2
                           }, 1024)

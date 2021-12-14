@@ -14,7 +14,7 @@
 						<q-icon color="grey" :name="link.icon"/>
 					</q-item-section>
 					<q-item-section>
-						<router-link class="text-body1" :to="link.path">{{ link.text }}</router-link>
+						<a :href="link.path" target="_blank">{{ link.text }}</a>
 					</q-item-section>
 				</q-item>
 
@@ -52,8 +52,8 @@
 
 	const state = reactive({
 		links1: [
-			{ icon: 'home', text: 'В макробанк (ERP)',path: `${protocol}//${hostname}:${VITE_erp_ext_port}/`},
-			{ icon: 'show_chart', text: 'В макробанк (KSB)',path: `${protocol}//${hostname}:${VITE_ksb_ext_port}/`},
+			{ icon: 'home', text: 'В макробанк (ERP)', path: `${protocol}//${hostname}:${VITE_erp_ext_port}/`},
+			{ icon: 'show_chart', text: 'В макробанк (KSB)', path: `${protocol}//${hostname}:${VITE_ksb_ext_port}/`},
 		],
 		links2: [
 			{
