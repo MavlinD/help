@@ -1,0 +1,17 @@
+server {
+    listen $app_int_port;
+    server_name $app_server_name;
+
+    include     nginxconfig.io/security.conf;
+
+    error_log   /var/log/nginx/$app_server_name.error-$app_int_port.log warn;
+
+    # index.html fallback
+    location ~* / {
+            autoindex on;
+            root /home/appuser/src/app/dist/;
+    }
+
+    # additional config
+    include nginxconfig.io/general.conf;
+}

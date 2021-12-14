@@ -1,0 +1,15 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Blog engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd server && venv/bin/activate && pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MavlinD/blog.git"
+  },
+  "author": "MDV",
+  "license": "GPL"
+}

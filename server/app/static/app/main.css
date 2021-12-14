@@ -1,0 +1,63 @@
+body {
+    background-color: #210202;
+}
+
+.rounded-0 {
+    border-radius: 0;
+}
+
+.jumbotron {
+    color: #092f0f;
+    background-color: #bbc9d8;
+}
+
+a {
+    color: #9F2E3F;
+}
+
+code {
+    padding: .5rem 1rem;
+    margin-top: .25rem;
+    display: inline-block;
+    background-color: #282A36;
+    color: #57CAFC;
+    word-break: break-all;
+}
+
+.link {
+    color: #5a0610;
+}
+
+.help li {
+    padding: .75rem .5rem .5rem;
+}
+
+h2 {
+    margin-top: 3rem;
+    text-decoration: underline;
+}
+
+.row {
+    padding-right: 3rem;
+}
+
+.form-group.api-response {
+    margin: 0;
+    word-break: break-word;
+}
+
+#api_endpoints + table {
+    margin-top: 3rem;
+}
+
+.jumbotron .description {
+    font-size: 1.5rem;
+}
+
+.text-bold{
+    font-weight: 700;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}

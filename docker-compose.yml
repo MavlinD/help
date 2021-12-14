@@ -1,0 +1,70 @@
+version: "3.9"
+
+services:
+  core:
+    profiles: [ core ]
+    extends:
+      service: core
+      file: server/docker-compose.yml
+
+    env_file: [ .env ]
+    networks:
+      - $NET_NAME
+
+    ports:
+      - ${api_ext_port:-9250}:${api_int_port:-8000}
+
+    volumes:
+      - ./package.json:/home/appuser/package.json
+
+      - type: bind
+        source: ./server/.bash_history
+        target: /home/appuser/.bash_history
+
+      - type: bind
+        source: .bashrc
+        target: /home/appuser/.bashrc
+
+      - type: bind
+        source: ./dbs/db.sqlite3
+        target: /home/appuser/dbs/db.sqlite3
+
+      - type: bind
+        source: ./dbs/media
+        target: /home/appuser/dbs/media
+
+  web:
+    profiles: [ web ]
+    build: ./nginx
+    restart: unless-stopped
+    hostname: web
+    container_name: web
+    env_file: [ .env ]
+    ports:
+      - ${app_ext_port:-9200}:${app_int_port:-8200}
+
+    networks:
+      - $NET_NAME
+
+    volumes:
+
+      - type: bind
+        source: ./nginx/.bash_history
+        target: /home/appuser/.bash_history
+
+      - type: bind
+        source: .bashrc
+        target: /home/appuser/.bashrc
+
+      - type: bind
+        source: ./server/app/static
+        target: /home/appuser/src/app/static
+
+      - type: bind
+        source: ./client/dist
+        target: /home/appuser/src/app/dist
+
+
+networks:
+  mbank:
+    name: $NET_NAME
