@@ -1,5 +1,5 @@
 import { bc as defineComponent, o as openBlock, aw as createElementBlock, i as createBaseVNode, V as createVNode, W as QBtn } from "./vendor.cde5035b.js";
-import { s as setTitle } from "./index.ce202132.js";
+import { s as setTitle } from "./index.dc0058ce.js";
 const _hoisted_1 = { class: "fullscreen bg-blue text-white text-center q-pa-md flex flex-center" };
 const _hoisted_2 = /* @__PURE__ */ createBaseVNode("div", { style: { "font-size": "30vh" } }, " 404 ", -1);
 const _hoisted_3 = /* @__PURE__ */ createBaseVNode("div", {
