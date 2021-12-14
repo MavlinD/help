@@ -111,7 +111,7 @@ DEFAULT_HOST = 'www'
 DOMAIN = 'www'
 PROTOCOL = 'http'
 
-npm = json.loads(open(os.path.join(BASE_DIR, '..', '..', "package.json")).read())
+npm = json.loads(open(os.path.join(BASE_DIR, '..', '..', 'client', "package.json")).read())
 
 if DEBUG:
 	EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
