@@ -6,10 +6,11 @@ server {
 
     error_log   /var/log/nginx/$app_server_name.error-$app_int_port.log warn;
 
-    # index.html fallback
-    location ~* / {
-            autoindex on;
-            root /home/appuser/src/app/dist/;
+    root /home/appuser/src/app/dist/;
+    index index.html;
+
+    location / {
+      try_files $uri $uri/ /index.html;
     }
 
     # additional config

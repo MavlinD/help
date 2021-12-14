@@ -36,6 +36,11 @@ COPY . .
 USER root
 COPY run.sh .
 RUN chmod +x run.sh
+
+# иначе бд джанги будет ридонли, даже несмотря на правильные разрешения внитри контейнера
+RUN mkdir -p /home/$USERNAME/dbs
+RUN chown -R $USERNAME:$USERNAME /home/$USERNAME/dbs
+
 USER $USERNAME
 # modify path variable
 ENV PATH="/home/$USERNAME/.local/bin:$PATH"
