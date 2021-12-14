@@ -10,6 +10,11 @@ server {
         root /home/appuser/src/app/;
     }
 
+    location /media/ {
+        autoindex on;
+        root /home/appuser/src/app/;
+    }
+
     location / {
         resolver 127.0.0.11 valid=30s;
         set $upstream $core_protocol://$core_host_name:$core_port;

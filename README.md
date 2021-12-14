@@ -27,6 +27,8 @@
 
 - python -m pip --version
 - python3 -m pip install --upgrade pip - если зависимости не устанавливаются
+- собрать статику
+- pm collectstatic
 
 ### Tests & Scripts
 
