@@ -200,9 +200,9 @@ REST_FRAMEWORK = {
 	"DEFAULT_AUTHENTICATION_CLASSES": (
 		# порядок важен
 		# в запросе с токеном в заголовке нет пароля, поэтому кастомная реализация нужна в самом верху
+		"accounts.authentication.MyTokenAuthentication",
 		"rest_framework.authentication.TokenAuthentication",
 		"rest_framework_simplejwt.authentication.JWTAuthentication",
-		# "accounts.authentication.MyTokenAuthentication",
 	),
 	"DEFAULT_PERMISSION_CLASSES": [
 		"rest_framework.permissions.IsAuthenticated",

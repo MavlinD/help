@@ -24,7 +24,7 @@ class MyTokenAuthentication(TokenAuthentication):
 		"""
 		token = request.headers.get('Authorization')
 		headers = {'Authorization': f'{token}'}
-		# print(Color.PALEVIOLETRED + '\n' + repr(token))
+		print(Color.PALEVIOLETRED + '\n' + repr(token))
 		try:
 			r = requests.get(os.getenv('auth') + os.getenv('auth_get_user'), headers=headers)
 			resp = json.loads(r.text)
