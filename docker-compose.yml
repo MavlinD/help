@@ -11,9 +11,6 @@ services:
     networks:
       - $NET_NAME
 
-    ports:
-      - ${VITE_api_ext_port:-9250}:${api_int_port:-8000}
-
     volumes:
       - ./client/package.json:/home/appuser/client/package.json
 
@@ -40,8 +37,11 @@ services:
     hostname: web
     container_name: web
     env_file: [ .env, .env.production ]
+    environment:
+      - app_int_port
     ports:
       - ${app_ext_port:-9200}:${app_int_port:-8200}
+      - ${VITE_api_ext_port:-9250}:${api_int_port:-8000}
 
     networks:
       - $NET_NAME

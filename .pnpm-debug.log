@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "err": {
+      "name": "pnpm",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"/home/mdv/Documents/Projects/help\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/home/mdv/Documents/Projects/help\".\n    at readProjectManifest (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40466:13)\n    at async Object.readProjectManifestOnly (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40470:28)\n    at async Object.readProjectManifestOnly (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40689:24)\n    at async Object.handler (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:129525:24)\n    at async /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133699:20\n    at async run (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133674:34)\n    at async runPnpm (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133884:5)\n    at async /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133876:7"
+    }
+  }
+}
