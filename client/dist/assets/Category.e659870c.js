@@ -18,9 +18,9 @@ var __spreadValues = (a, b) => {
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { j as createComponent, aC as useRouterLinkProps, aS as useRouterLink, m as computed, n as h, Z as QIcon, K as hMergeSlot, aM as useAlignProps, aN as useAlign, aT as getNormalizedVNodes, s as hSlot, T as useStore, v as watch, x as onMounted, o as openBlock, f as createBlock, w as withCtx, V as createVNode, aw as createElementBlock, ax as renderList, Y as unref, az as Fragment, i as createBaseVNode, a5 as toDisplayString } from "./vendor.cde5035b.js";
-import { _ as _sfc_main$1 } from "./default.1dd637dd.js";
-import { _ as _sfc_main$2 } from "./ArticlesList.93ac4db0.js";
-import { b as brCrumbs, s as setTitle } from "./index.dc0058ce.js";
+import { _ as _sfc_main$1 } from "./default.2881da31.js";
+import { _ as _sfc_main$2 } from "./ArticlesList.d2efefc0.js";
+import { b as brCrumbs, s as setTitle } from "./index.af3c6d86.js";
 import "./QCard.ada68c8f.js";
 var QBreadcrumbsEl = createComponent({
   name: "QBreadcrumbsEl",

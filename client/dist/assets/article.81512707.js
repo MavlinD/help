@@ -15,7 +15,7 @@ var __spreadValues = (a, b) => {
   return a;
 };
 import { n as h, j as createComponent, aQ as useSpinnerProps, aR as useSpinner, J as reactive, x as onMounted, N as Notify, T as useStore, E as ref, m as computed } from "./vendor.cde5035b.js";
-import { s as setTitle, g as goToArticle } from "./index.dc0058ce.js";
+import { s as setTitle, g as goToArticle } from "./index.af3c6d86.js";
 const svg = [
   h("g", {
     transform: "translate(20 50)"

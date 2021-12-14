@@ -79,7 +79,7 @@
 	} = import.meta.env
 
 	const { VITE_token_name } = import.meta.env
-	// console.log(import.meta)
+	// console.log(VITE_token_name)
 
 	const state = reactive({
 		username: usernameDefault,

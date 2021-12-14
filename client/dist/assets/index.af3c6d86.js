@@ -74,8 +74,9 @@ const __vitePreload = function preload(baseModule, deps) {
     }
   })).then(() => baseModule());
 };
+const { VITE_token_name: VITE_token_name$2 } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "base_token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
 function isAuth() {
-  return Plugin$1.has("token");
+  return Plugin$1.has(VITE_token_name$2);
 }
 function isStaff() {
   var _a;
@@ -106,7 +107,7 @@ const setTitle = (title) => {
   const brand = "FAQ \u041C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A";
   document.title = `${title ? title : brand}`;
 };
-const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.76dc3a52.js"), ["assets/About.76dc3a52.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.72a8d3a1.js"), ["assets/Articles.72a8d3a1.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.93ac4db0.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.919be112.js"), ["assets/Home.919be112.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.c2ed9637.js"), ["assets/Search.c2ed9637.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.93ac4db0.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.b6e3d32a.js"), ["assets/login.b6e3d32a.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
+const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.ffa79e9c.js"), ["assets/About.ffa79e9c.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.5250702b.js"), ["assets/Articles.5250702b.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.d2efefc0.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.095dd1ab.js"), ["assets/Home.095dd1ab.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.7510b967.js"), ["assets/Search.7510b967.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.d2efefc0.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.6f90056e.js"), ["assets/login.6f90056e.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
 let meta = {
   home: {
     requiresAuth: true,
@@ -140,7 +141,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Article.624208a6.js"), true ? ["assets/Article.624208a6.js","assets/vendor.cde5035b.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.442c4af3.js","assets/article.b65c451b.js"] : void 0)
+  component: () => __vitePreload(() => import("./Article.62b201bf.js"), true ? ["assets/Article.62b201bf.js","assets/vendor.cde5035b.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.a8a95462.js","assets/article.81512707.js"] : void 0)
 }, {
   name: "category",
   path: "/category/:slug",
@@ -148,7 +149,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Category.4ed5ff24.js"), true ? ["assets/Category.4ed5ff24.js","assets/vendor.cde5035b.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.93ac4db0.js"] : void 0)
+  component: () => __vitePreload(() => import("./Category.e659870c.js"), true ? ["assets/Category.e659870c.js","assets/vendor.cde5035b.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.d2efefc0.js"] : void 0)
 }, {
   name: "article-edit",
   path: "/article/edit/:slug",
@@ -156,20 +157,20 @@ routes.push({
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleEdit.0889d8c1.js"), true ? ["assets/ArticleEdit.0889d8c1.js","assets/ArticleTpl.712f3311.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/article.b65c451b.js","assets/ArticleDelete.442c4af3.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleEdit.46fb277a.js"), true ? ["assets/ArticleEdit.46fb277a.js","assets/ArticleTpl.4dcd4fc7.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/article.81512707.js","assets/ArticleDelete.a8a95462.js"] : void 0)
 }, {
   name: "article-add",
   path: "/article/add",
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleAdd.0c3b0afa.js"), true ? ["assets/ArticleAdd.0c3b0afa.js","assets/ArticleTpl.712f3311.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.1dd637dd.js","assets/default.532363f2.css","assets/article.b65c451b.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleAdd.0d4ab7b0.js"), true ? ["assets/ArticleAdd.0d4ab7b0.js","assets/ArticleTpl.4dcd4fc7.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.2881da31.js","assets/default.532363f2.css","assets/article.81512707.js"] : void 0)
 }, {
   path: "/:catchAll(.*)*",
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Error404.fd4fed69.js"), true ? ["assets/Error404.fd4fed69.js","assets/vendor.cde5035b.js"] : void 0)
+  component: () => __vitePreload(() => import("./Error404.3f944b6f.js"), true ? ["assets/Error404.3f944b6f.js","assets/vendor.cde5035b.js"] : void 0)
 });
 function routerGuard(router2, store2) {
   router2.beforeEach((to, from, next) => {

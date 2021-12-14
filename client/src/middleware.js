@@ -1,11 +1,12 @@
 import {LocalStorage, Cookies} from 'quasar'
+const { VITE_token_name } = import.meta.env
 
 /**
  * определяет аутентифицирован ли пользователь
  * @returns {boolean}
  */
 export function isAuth() {
-	return Cookies.has('token')
+	return Cookies.has(VITE_token_name)
 }
 
 /**
