@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 import requests
 from rest_framework import status
 from rest_framework.authentication import	TokenAuthentication
+from rest_framework.authtoken.models import Token
 
 from app.tools import Color
 
@@ -76,25 +77,16 @@ class SettingsBackend(ModelBackend):
 			# print(Color.GREEN + '\n' + repr(r.text))
 			resp = json.loads(r.text)
 			if r.status_code == status.HTTP_200_OK:
-				username = None
-				email = None
-				is_active = None
-				is_staff = None
-				is_superuser = None
-				try:
-					username = resp.get('username')
-					email = resp.get('email')
-					is_active = resp.get('is_active')
-					is_staff = resp.get('is_staff')
-					is_superuser = resp.get('is_superuser')
-					user = User.objects.get(username=username)
-				except UserModel.DoesNotExist:
-					user = User.objects.create_user(username=username, password=password, email=email)
-					user.is_active = is_active
-					user.is_staff = is_staff
-					user.is_superuser = is_superuser
-					user.save()
-					# print(Color.MAGENTA + '\n' + repr(user))
+				username = resp.get('username')
+				email = resp.get('email')
+				is_active = resp.get('is_active')
+				is_staff = resp.get('is_staff')
+				is_superuser = resp.get('is_superuser')
+				User.objects.update_or_create(username=username, defaults={'password': password,
+						'email': email, 'is_active': is_active, 'is_superuser': is_superuser,
+						'is_staff': is_staff})
+				user = User.objects.get(username=username)
+				# print(Color.MAGENTA + '\n' + repr(user))
 				return user
 		except Exception as err:
 			print(Color.MAGENTA + '\n' + repr(err))

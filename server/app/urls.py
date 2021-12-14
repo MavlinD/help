@@ -21,7 +21,8 @@ urlpatterns = [
 	re_path(r'^api/user/', include('app.users.urls')),
 	# адрес необходим для процесса регистрации
 	# https://django-rest-auth.readthedocs.io/en/latest/index.html
-	re_path(r'^api/rest-auth/login/', MyLoginView.as_view(), name='rest_login'),
+	re_path(r'^api/rest-auth/login/', CustomAuthToken.as_view(), name='rest_login'),
+	# re_path(r'^api/rest-auth/login/', MyLoginView.as_view(), name='rest_login'),
 	# re_path(r'^api/rest-auth/registration/', MyRegisterView.as_view(), name='rest_register'),
 	re_path(r'^api/rest-auth/', include('rest_auth.urls')),
 	re_path(r'^api/rest-auth/user/', UserDetailAdd.as_view(), name='user-detail'),
@@ -37,11 +38,6 @@ urlpatterns = [
 			  include('django_rest_passwordreset.urls', namespace='rest_password_reset')),
 	re_path('^demo/', include('app.urls-demo'), name='demo')
 ]
-
-# # отчеты
-# downloads_path = r'^%s(?P<path>.*)$' % 'downloads/'
-# # шаблоны
-# tpl_downloads_path = r'^%s(?P<path>.*)$' % 'tpl/'
 
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
