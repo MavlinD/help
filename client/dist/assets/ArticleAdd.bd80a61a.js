@@ -1,9 +1,9 @@
-import { _ as _sfc_main$1 } from "./ArticleTpl.4e1ea5c6.js";
-import { a as addArticle } from "./article.507d2f4e.js";
+import { _ as _sfc_main$1 } from "./ArticleTpl.93ff35a0.js";
+import { a as addArticle } from "./article.93dd708f.js";
 import { S as useRouter, aP as toRefs, o as openBlock, f as createBlock, Y as unref } from "./vendor.cde5035b.js";
 import "./QCard.ada68c8f.js";
-import "./default.2a98e496.js";
-import "./index.2a47d4c3.js";
+import "./default.303b1b83.js";
+import "./index.ce202132.js";
 const _sfc_main = {
   setup(__props) {
     let router = useRouter();

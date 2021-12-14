@@ -1,6 +1,6 @@
-import { d as deleteArticle, Q as QSpinnerFacebook } from "./article.507d2f4e.js";
+import { d as deleteArticle, Q as QSpinnerFacebook } from "./article.93dd708f.js";
 import { S as useRouter, aP as toRefs, Y as unref, o as openBlock, f as createBlock, w as withCtx, V as createVNode, W as QBtn, X as createCommentVNode } from "./vendor.cde5035b.js";
-import { i as isStaff } from "./index.2a47d4c3.js";
+import { i as isStaff } from "./index.ce202132.js";
 const _sfc_main = {
   props: {
     id: Number

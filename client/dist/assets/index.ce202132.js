@@ -106,7 +106,7 @@ const setTitle = (title) => {
   const brand = "FAQ \u041C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A";
   document.title = `${title ? title : brand}`;
 };
-const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.dabf5fa3.js"), ["assets/About.dabf5fa3.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.3910a339.js"), ["assets/Articles.3910a339.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.ac2cc564.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.3480b533.js"), ["assets/Home.3480b533.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.20aa0eb1.js"), ["assets/Search.20aa0eb1.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.ac2cc564.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.2225438b.js"), ["assets/login.2225438b.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
+const pages = { "./pages/auto/About.vue": () => true ? __vitePreload(() => import("./About.11b76fed.js"), ["assets/About.11b76fed.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Articles.vue": () => true ? __vitePreload(() => import("./Articles.f18e3535.js"), ["assets/Articles.f18e3535.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.35ef48e8.js"]) : null, "./pages/auto/Home.vue": () => true ? __vitePreload(() => import("./Home.2d6fe093.js"), ["assets/Home.2d6fe093.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js"]) : null, "./pages/auto/Search.vue": () => true ? __vitePreload(() => import("./Search.a3ee287c.js"), ["assets/Search.a3ee287c.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/vendor.cde5035b.js","assets/QCard.ada68c8f.js","assets/ArticlesList.35ef48e8.js"]) : null, "./pages/auto/login.vue": () => true ? __vitePreload(() => import("./login.df1bf105.js"), ["assets/login.df1bf105.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js"]) : null };
 let meta = {
   home: {
     requiresAuth: true,
@@ -140,7 +140,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Article.63fd5e2b.js"), true ? ["assets/Article.63fd5e2b.js","assets/vendor.cde5035b.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.71626721.js","assets/article.507d2f4e.js"] : void 0)
+  component: () => __vitePreload(() => import("./Article.bb4e1d20.js"), true ? ["assets/Article.bb4e1d20.js","assets/vendor.cde5035b.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticleDelete.c1e6b54b.js","assets/article.93dd708f.js"] : void 0)
 }, {
   name: "category",
   path: "/category/:slug",
@@ -148,7 +148,7 @@ routes.push({
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Category.bbcc0fb1.js"), true ? ["assets/Category.bbcc0fb1.js","assets/vendor.cde5035b.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.ac2cc564.js"] : void 0)
+  component: () => __vitePreload(() => import("./Category.2e922cda.js"), true ? ["assets/Category.2e922cda.js","assets/vendor.cde5035b.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/QCard.ada68c8f.js","assets/ArticlesList.35ef48e8.js"] : void 0)
 }, {
   name: "article-edit",
   path: "/article/edit/:slug",
@@ -156,20 +156,20 @@ routes.push({
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleEdit.533c92b3.js"), true ? ["assets/ArticleEdit.533c92b3.js","assets/ArticleTpl.4e1ea5c6.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/article.507d2f4e.js","assets/ArticleDelete.71626721.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleEdit.50dd7658.js"), true ? ["assets/ArticleEdit.50dd7658.js","assets/ArticleTpl.93ff35a0.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/article.93dd708f.js","assets/ArticleDelete.c1e6b54b.js"] : void 0)
 }, {
   name: "article-add",
   path: "/article/add",
   meta: {
     requiresStaff: true
   },
-  component: () => __vitePreload(() => import("./ArticleAdd.3e4ae490.js"), true ? ["assets/ArticleAdd.3e4ae490.js","assets/ArticleTpl.4e1ea5c6.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.2a98e496.js","assets/default.532363f2.css","assets/article.507d2f4e.js"] : void 0)
+  component: () => __vitePreload(() => import("./ArticleAdd.bd80a61a.js"), true ? ["assets/ArticleAdd.bd80a61a.js","assets/ArticleTpl.93ff35a0.js","assets/QCard.ada68c8f.js","assets/vendor.cde5035b.js","assets/default.303b1b83.js","assets/default.532363f2.css","assets/article.93dd708f.js"] : void 0)
 }, {
   path: "/:catchAll(.*)*",
   meta: {
     requiresAuth: true
   },
-  component: () => __vitePreload(() => import("./Error404.eff06855.js"), true ? ["assets/Error404.eff06855.js","assets/vendor.cde5035b.js"] : void 0)
+  component: () => __vitePreload(() => import("./Error404.93b2a572.js"), true ? ["assets/Error404.93b2a572.js","assets/vendor.cde5035b.js"] : void 0)
 });
 function routerGuard(router2, store2) {
   router2.beforeEach((to, from, next) => {
@@ -284,7 +284,7 @@ function tryCatch(handler) {
     return $propertyDescriptor;
   };
 }
-const { VITE_token_name: VITE_token_name$1 } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "0.0.0.0", "VITE_debugging": "1", "VITE_token_name": "token", "VITE_username": "root", "VITE_password": "Macro3+%=()", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+const { VITE_token_name: VITE_token_name$1 } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
 function goToArticle(router2, slug) {
   router2.push({ name: "article", params: { slug } });
 }
@@ -337,7 +337,7 @@ var __decorateClass = (decorators, target, key, kind) => {
     __defProp(target, key, result);
   return result;
 };
-const { VITE_token_name, VITE_api_server_name, VITE_api_ext_port } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "0.0.0.0", "VITE_debugging": "1", "VITE_token_name": "token", "VITE_username": "root", "VITE_password": "Macro3+%=()", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+const { VITE_token_name, VITE_api_server_name, VITE_api_ext_port } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
 class Transport {
   constructor() {
     this.token = Plugin$1.get(VITE_token_name);
@@ -544,7 +544,7 @@ var categories = {
   actions,
   state
 };
-const { VITE_debugging } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "0.0.0.0", "VITE_debugging": "1", "VITE_token_name": "token", "VITE_username": "root", "VITE_password": "Macro3+%=()", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+const { VITE_debugging } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
 function Store() {
   return createStore({
     mutations: mutations$2,

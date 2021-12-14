@@ -11,8 +11,8 @@ __pycache__/
 */__tests__
 
 .env
+.env.*
 .env.prod
-#!.env.template
 
 #server/app/db.sqlite3
 

@@ -7,12 +7,12 @@ services:
       service: core
       file: server/docker-compose.yml
 
-    env_file: [ .env ]
+    env_file: [ .env, .env.production ]
     networks:
       - $NET_NAME
 
     ports:
-      - ${api_ext_port:-9250}:${api_int_port:-8000}
+      - ${VITE_api_ext_port:-9250}:${api_int_port:-8000}
 
     volumes:
       - ./client/package.json:/home/appuser/client/package.json
@@ -39,7 +39,7 @@ services:
     restart: unless-stopped
     hostname: web
     container_name: web
-    env_file: [ .env ]
+    env_file: [ .env, .env.production ]
     ports:
       - ${app_ext_port:-9200}:${app_int_port:-8200}
 

@@ -74,9 +74,12 @@
 	let route = useRoute()
 
 	const {
-		VITE_username: usernameDefault, VITE_token_name,
+		VITE_username: usernameDefault,
 		VITE_password: passwordDefault,
 	} = import.meta.env
+
+	const { VITE_token_name } = import.meta.env
+	// console.log(import.meta)
 
 	const state = reactive({
 		username: usernameDefault,

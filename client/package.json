@@ -6,6 +6,7 @@
 	"author": "mdv",
 	"scripts": {
 		"dev": "vite",
+		"dev:local": "vite --mode development",
 		"build": "cross-env NODE_ENV=production vite build",
 		"serve": "cross-env NODE_ENV=production vite preview"
 	},

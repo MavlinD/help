@@ -37,7 +37,7 @@ USER root
 COPY run.sh .
 RUN chmod +x run.sh
 
-# иначе бд джанги будет ридонли, даже несмотря на правильные разрешения внитри контейнера
+# иначе бд джанги будет ридонли, несмотря на правильные разрешения внутри контейнера
 RUN mkdir -p /home/$USERNAME/dbs
 RUN chown -R $USERNAME:$USERNAME /home/$USERNAME/dbs
 

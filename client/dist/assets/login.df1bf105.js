@@ -19,7 +19,7 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { b as QCardSection, Q as QInput, a as QCard } from "./QCard.ada68c8f.js";
 import { j as createComponent, E as ref, u as provide, x as onMounted, n as h, s as hSlot, t as getCurrentInstance, ah as stopAndPrevent, H as nextTick, aH as addFocusFn, aF as formKey, aM as useAlignProps, aN as useAlign, m as computed, U as useQuasar, S as useRouter, aO as useRoute, J as reactive, o as openBlock, aw as createElementBlock, i as createBaseVNode, V as createVNode, w as withCtx, $ as isRef, Y as unref, Z as QIcon, W as QBtn } from "./vendor.cde5035b.js";
-import { s as setTitle, T as Transport } from "./index.2a47d4c3.js";
+import { s as setTitle, T as Transport } from "./index.ce202132.js";
 var QForm = createComponent({
   name: "QForm",
   props: {
@@ -168,9 +168,9 @@ const _sfc_main = {
     let route = useRoute();
     const {
       VITE_username: usernameDefault,
-      VITE_token_name,
       VITE_password: passwordDefault
-    } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "0.0.0.0", "VITE_debugging": "1", "VITE_token_name": "token", "VITE_username": "root", "VITE_password": "Macro3+%=()", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+    } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+    const { VITE_token_name } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
     const state = reactive({
       username: usernameDefault,
       password: passwordDefault,
