@@ -1,5 +1,5 @@
 import { T as useStore, S as useRouter, r as resolveComponent, o as openBlock, aw as createElementBlock, ax as renderList, f as createBlock, w as withCtx, V as createVNode, a4 as QItemSection, i as createBaseVNode, a6 as createTextVNode, a5 as toDisplayString, Y as unref, aL as moment, a3 as QItem, az as Fragment } from "./vendor.cde5035b.js";
-import { a as QList } from "./default.2881da31.js";
+import { a as QList } from "./default.20a2ccec.js";
 const _hoisted_1 = ["innerHTML"];
 const _hoisted_2 = /* @__PURE__ */ createBaseVNode("span", null, "\u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0430", -1);
 const _sfc_main = {

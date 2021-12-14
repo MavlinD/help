@@ -1,5 +1,5 @@
-import { Q as QPage, _ as _sfc_main$1 } from "./default.2881da31.js";
-import { s as setTitle } from "./index.af3c6d86.js";
+import { Q as QPage, _ as _sfc_main$1 } from "./default.20a2ccec.js";
+import { s as setTitle } from "./index.03372a61.js";
 import { o as openBlock, f as createBlock, w as withCtx, V as createVNode, i as createBaseVNode } from "./vendor.cde5035b.js";
 import "./QCard.ada68c8f.js";
 const _hoisted_1 = /* @__PURE__ */ createBaseVNode("h2", { class: "text-primary q-pl-lg" }, "\u0414\u043E\u043C\u0430\u0448\u043D\u044F\u044F \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430", -1);

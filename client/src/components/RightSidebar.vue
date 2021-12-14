@@ -39,7 +39,7 @@
 	import {reactive} from 'vue'
 	import {isAuth} from '@/middleware'
 
-	const { VITE_api_ext_port } = import.meta.env
+	const { VITE_api_ext_port, VITE_erp_ext_port, VITE_ksb_ext_port } = import.meta.env
 
 	defineProps({
 		isOpen: {
@@ -52,7 +52,8 @@
 
 	const state = reactive({
 		links1: [
-			{ icon: 'home', text: 'В макробанк', path: '#' },
+			{ icon: 'home', text: 'В макробанк (ERP)',path: `${protocol}//${hostname}:${VITE_erp_ext_port}/`},
+			{ icon: 'show_chart', text: 'В макробанк (KSB)',path: `${protocol}//${hostname}:${VITE_ksb_ext_port}/`},
 		],
 		links2: [
 			{

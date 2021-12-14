@@ -19,7 +19,7 @@ var __spreadValues = (a, b) => {
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { j as createComponent, k as inject, l as layoutKey, p as pageContainerKey, m as computed, n as h, s as hSlot, t as getCurrentInstance, u as provide, v as watch, x as onMounted, y as onBeforeUnmount, z as noop, A as getScrollTarget, B as listenOpts, C as getVerticalScrollPosition, D as getHorizontalScrollPosition, E as ref, F as isRuntimeSsrPreHydration, H as nextTick, I as getScrollbarWidth, J as reactive, K as hMergeSlot, M as useDarkProps, O as useDark, R as hUniqueSlot, S as useRouter, T as useStore, U as useQuasar, r as resolveComponent, o as openBlock, f as createBlock, w as withCtx, V as createVNode, W as QBtn, X as createCommentVNode, Y as unref, Z as QIcon, i as createBaseVNode, _ as withKeys, $ as isRef, a0 as QTooltip, a1 as QAvatar, a2 as QMenu, a3 as QItem, a4 as QItemSection, a5 as toDisplayString, a6 as createTextVNode, a7 as withModifiers, a8 as createDirective, a9 as client, aa as leftClick, ab as addEvt, ac as preventDraggable, ad as prevent, ae as stop, af as position, ag as cleanEvt, ah as stopAndPrevent, ai as clearSelection, aj as between, ak as debounce, al as withDirectives, am as setVerticalScrollPosition, an as setHorizontalScrollPosition, ao as History, ap as getEventPath, aq as hasScrollbar, ar as useModelToggleProps, as as useModelToggleEmits, at as useTimeout, au as useModelToggle, av as hDir, aw as createElementBlock, ax as renderList, ay as Ripple, az as Fragment, aA as Transition, aB as shallowReactive, aC as useRouterLinkProps, aD as vShow, aE as renderSlot } from "./vendor.cde5035b.js";
 import { Q as QInput, u as uid$1, a as QCard, b as QCardSection } from "./QCard.ada68c8f.js";
-import { i as isStaff, l as logout, a as isAuth } from "./index.af3c6d86.js";
+import { i as isStaff, l as logout, a as isAuth } from "./index.03372a61.js";
 var QPage = createComponent({
   name: "QPage",
   props: {
@@ -2110,11 +2110,12 @@ const _sfc_main$4 = {
     }
   },
   setup(__props) {
-    const { VITE_api_ext_port } = { "VITE_api_ext_port": "9250", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "base_token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
+    const { VITE_api_ext_port, VITE_erp_ext_port, VITE_ksb_ext_port } = { "VITE_api_ext_port": "9250", "VITE_erp_ext_port": "8093", "VITE_ksb_ext_port": "8053", "VITE_api_server_name": "77.223.101.127", "VITE_debugging": "0", "VITE_token_name": "base_token", "BASE_URL": "/", "MODE": "production", "DEV": false, "PROD": true };
     let { protocol, hostname } = document.location;
     const state = reactive({
       links1: [
-        { icon: "home", text: "\u0412 \u043C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A", path: "#" }
+        { icon: "home", text: "\u0412 \u043C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A (ERP)", path: `${protocol}//${hostname}:${VITE_erp_ext_port}/` },
+        { icon: "show_chart", text: "\u0412 \u043C\u0430\u043A\u0440\u043E\u0431\u0430\u043D\u043A (KSB)", path: `${protocol}//${hostname}:${VITE_ksb_ext_port}/` }
       ],
       links2: [
         {
