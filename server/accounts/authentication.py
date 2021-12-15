@@ -18,32 +18,28 @@ class MyTokenAuthentication(TokenAuthentication):
 
 	def authenticate(self, request):
 		"""
-		!!! не используется сейчас
-		удостоверяет пользователя на удаленном узле, добавляет пользователя в свою БД, если
-		таковой отсутствует. Пользователь добавляется с пустым паролем.
+		удостоверяет пользователя на удаленном узле, обновляет пользователя в своей БД или создает,
+		если таковой отсутствует. Пользователь добавляется с пустым паролем.
 		"""
 		token = request.headers.get('Authorization')
 		headers = {'Authorization': f'{token}'}
 		# print(Color.PALEVIOLETRED + '\n' + repr(token))
 		try:
 			r = requests.get(os.getenv('auth') + os.getenv('auth_get_user'), headers=headers)
+			# print(Color.PALEVIOLETRED + '\n' + repr(r))
 			resp = json.loads(r.text)
 			if r.status_code == status.HTTP_200_OK:
-				username = None
-				email=None
-				is_active = None
-				is_staff = None
-				is_superuser = None
-				try:
-					username = resp.get('username')
-					email = resp.get('email')
-					user = User.objects.get(username=username)
-				except UserModel.DoesNotExist:
-					user = User.objects.create_user(username=username, email=email)
-					user.is_active = is_active
-					user.is_staff = is_staff
-					user.is_superuser = is_superuser
-					user.save()
+				username = resp.get('username')
+				email = resp.get('email')
+				is_active = resp.get('is_active')
+				is_staff = resp.get('is_staff')
+				is_superuser = resp.get('is_superuser')
+				User.objects.update_or_create(username=username, defaults={
+																							  'email': email,
+																							  'is_active': is_active,
+																							  'is_superuser': is_superuser,
+																							  'is_staff': is_staff})
+				user = User.objects.get(username=username)
 				return user, token
 		except Exception as err:
 			print(Color.MAGENTA + '\n' + repr(err))

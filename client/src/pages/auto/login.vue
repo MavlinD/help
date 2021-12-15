@@ -122,5 +122,5 @@
 		state.passwordFieldType = state.visibility ? 'text' : 'password'
 		state.visibilityIcon = state.visibility ? 'visibility_off' : 'visibility'
 	}
-
+	
 </script>

@@ -1,7 +1,8 @@
-from colorama import Fore, init
-# from django.contrib.auth.models import User, Group
+import os
+
+import requests
 from rest_auth.registration.views import RegisterView
-from rest_framework import status, viewsets
+from rest_framework import status, viewsets, generics
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication, \
 	TokenAuthentication
 from rest_framework.utils import json
