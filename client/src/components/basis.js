@@ -40,6 +40,7 @@ export const myNotify = error => {
 	loadingBarStop()
 	// выйдем если сервер перестал удостоверять пользователя
 	if (status == 401){
+		console.log('logout')
 		logout()
 	}
 }

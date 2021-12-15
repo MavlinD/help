@@ -1,5 +1,5 @@
 <template>
-	<div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+	<div v-if="form" class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
 		<div class="column q-pa-lg">
 			<div class="row">
 				<q-card square class="shadow-24" style="width:400px;height:450px;">
@@ -61,7 +61,7 @@
 <!--https://codepen.io/greyufo/pen/eYZejPz-->
 
 <script setup>
-	import {ref, reactive, nextTick} from 'vue'
+	import {ref, reactive, onMounted} from 'vue'
 	import {useQuasar} from 'quasar'
 
 	const $q = useQuasar()
@@ -96,6 +96,7 @@
 
 	let username = ref(0)
 	let password = ref(0)
+	let form = ref(false)
 
 	let submit = async () => {
 
@@ -122,5 +123,20 @@
 		state.passwordFieldType = state.visibility ? 'text' : 'password'
 		state.visibilityIcon = state.visibility ? 'visibility_off' : 'visibility'
 	}
-	
+
+	onMounted(async() => {
+		let token = $q.cookies.get(VITE_token_name)
+		if (token) {
+			let transport = new Transport()
+			transport.authorize()
+			let resp = await transport.get('user')
+			// console.log(resp)
+			if (resp.status === 200) {
+				$q.localStorage.set('user', resp.data)
+				await router.replace({ path: String(route.query.from) })
+			}
+		}
+		form.value = true
+	})
+
 </script>
