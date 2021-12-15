@@ -19,17 +19,16 @@
 				</q-item>
 
 				<q-separator class="q-my-md"/>
-
-				<q-item v-for="link in state.links2" :key="link.text" v-ripple clickable>
-					<template v-if="link.auth()">
+				<template v-for="link in state.links2" :key="link.text">
+				<q-item v-if="link.access()"  v-ripple clickable>
 						<q-item-section avatar>
 							<q-icon color="grey" :name="link.icon"/>
 						</q-item-section>
 						<q-item-section>
 							<a :href="link.path" target="_blank">{{ link.text }}</a>
 						</q-item-section>
-					</template>
 				</q-item>
+				</template>
 			</q-list>
 		</q-scroll-area>
 	</q-drawer>
@@ -37,7 +36,7 @@
 
 <script setup>
 	import {reactive} from 'vue'
-	import {isAuth} from '@/middleware'
+	import {isStaff} from '@/middleware'
 
 	const { VITE_api_ext_port, VITE_erp_ext_port, VITE_ksb_ext_port } = import.meta.env
 
@@ -58,19 +57,19 @@
 		links2: [
 			{
 				icon: 'door_back',
-				auth: () => isAuth(),
+				access: () => isStaff(),
 				text: `Бекенд`,
 				path: `${protocol}//${hostname}:${VITE_api_ext_port}/`
 			},
 			{
 				icon: 'admin_panel_settings',
-				auth: () => isAuth(),
+				access: () => isStaff(),
 				text: `Админко`,
 				path: `${protocol}//${hostname}:${VITE_api_ext_port}/admin-help/`
 			},
 			{
 				icon: 'insert_emoticon',
-				auth: () => true,
+				access: () => true,
 				text: 'Доступные иконки',
 				path: 'https://fonts.google.com/icons'
 			},

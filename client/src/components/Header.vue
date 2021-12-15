@@ -85,7 +85,7 @@
 <script setup>
 	import {computed, onMounted, reactive, ref} from 'vue'
 	import {useStore} from 'vuex'
-	import {fasBomb, fasPlusCircle} from '@quasar/extras/fontawesome-v5'
+	import {fasPlusCircle} from '@quasar/extras/fontawesome-v5'
 	import {useQuasar} from 'quasar'
 	import {logout} from '@/components/basis'
 	import {isStaff} from '@/middleware'

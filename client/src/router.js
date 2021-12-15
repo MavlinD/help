@@ -91,12 +91,12 @@ routes.push(
  * @param store vuex instanse
  */
 export function routerGuard(router, store) {
-	router.beforeEach((to, from, next) => {
+	router.beforeEach(async (to, from, next) => {
 
 		const middleware = to.meta?.middleware
 		const context = { to, from, next, store }
 
-		const canAccess = canUserAccess(to, from)
+		const canAccess = await canUserAccess(to, from)
 
 		if (canAccess) {
 			// console.log('can access')

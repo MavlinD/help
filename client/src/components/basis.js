@@ -7,6 +7,7 @@ export function goToArticle(router, slug){
 }
 
 export const logout = () => {
+	// console.log(VITE_token_name)
 	Cookies.remove(VITE_token_name)
 	LocalStorage.remove('user')
 	document.location.reload()

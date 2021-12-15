@@ -25,6 +25,7 @@ export async function isAuth() {
 			return true
 		}
 	}
+	return false
 }
 
 /**
@@ -46,8 +47,7 @@ export async function canUserAccess(to, from) {
 	// console.log(to)
 	// console.log(from)
 	if (to.meta.requiresAuth) {
-		// console.log(isAuth())
-		return isAuth()
+		return await isAuth()
 	}
 	if (to.meta.requiresStaff) {
 		// console.log(isStaff())
