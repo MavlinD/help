@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  jsm:
+    build: .
+    container_name: jsm${suffix}
+    hostname: jsm
+    # запустится в контексте WORKDIR
+    command: bash client/run.sh
+    tty: true
+    volumes:
+        #  том с клиентскими исходниками, сюда же размещаются зависимости
+      - type: bind
+        source: ../client
+        target: /home/node/client

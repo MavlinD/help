@@ -29,3 +29,5 @@ COMMANDS.md
 /dbs/media
 /dbs/db.sqlite3
 
+/client/.pnpm-store/
+/client/dist/

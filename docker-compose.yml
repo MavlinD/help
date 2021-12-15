@@ -1,6 +1,15 @@
 version: "3.9"
 
 services:
+
+  # сервис для сборки проекта на хостинге
+  jsm:
+    profiles: [ jsm ]
+    extends:
+      service: jsm
+      file: jsm/docker-compose.yml
+    env_file: [ .env.production ]
+
   core:
     profiles: [ core ]
     extends:
