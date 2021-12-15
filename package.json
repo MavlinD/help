@@ -4,7 +4,7 @@
 	"description": "блог модуль для интеграции",
 	"main": "index.js",
 	"scripts": {
-		"web": "pnpm -C client dev"
+		"dev": "pnpm -C client dev"
 	},
 	"author": "mdv"
 }

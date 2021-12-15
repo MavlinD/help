@@ -1,6 +1,5 @@
 import {LocalStorage, Cookies, LoadingBar, Notify} from 'quasar'
 
-
 const { VITE_token_name } = import.meta.env
 
 export function goToArticle(router, slug){

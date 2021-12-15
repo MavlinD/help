@@ -1,12 +1,30 @@
 import {LocalStorage, Cookies} from 'quasar'
+import {Transport} from '@/store/lib'
+
 const { VITE_token_name } = import.meta.env
+
+// флаг, что запрос на аутентификацию уже отправлен
+let isReq = false
 
 /**
  * определяет аутентифицирован ли пользователь
  * @returns {boolean}
  */
-export function isAuth() {
-	return Cookies.has(VITE_token_name)
+export async function isAuth() {
+	let token = Cookies.get(VITE_token_name)
+	if (token && LocalStorage.getItem('user')) return true
+	if (token && !isReq) {
+		let transport = new Transport()
+		transport.authorize()
+		isReq = true
+		let resp = await transport.get('user')
+		isReq = false
+		// console.log(resp)
+		if (resp.status === 200) {
+			LocalStorage.set('user', resp.data)
+			return true
+		}
+	}
 }
 
 /**
@@ -24,7 +42,7 @@ export function isStaff() {
  * @param from
  * @returns Boolean
  */
-export function canUserAccess(to, from) {
+export async function canUserAccess(to, from) {
 	// console.log(to)
 	// console.log(from)
 	if (to.meta.requiresAuth) {
