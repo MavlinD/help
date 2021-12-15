@@ -201,7 +201,9 @@ REST_FRAMEWORK = {
 		# порядок важен
 		# в запросе с токеном в заголовке нет пароля, поэтому кастомная реализация нужна в самом верху
 		"accounts.authentication.MyTokenAuthentication",
-		"rest_framework.authentication.TokenAuthentication",
+		# если включить строку ниже, то доступ к локальной админке сохраниться, даже если на
+		# основном ауфе пароль измениться
+		# "rest_framework.authentication.TokenAuthentication",
 		"rest_framework_simplejwt.authentication.JWTAuthentication",
 	),
 	"DEFAULT_PERMISSION_CLASSES": [

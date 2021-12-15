@@ -7,14 +7,14 @@
 						<h4 class="text-h5 text-white q-my-md">Авторизация</h4>
 					</q-card-section>
 					<q-card-section>
-						<q-form class="q-px-sm q-pt-xl">
+						<q-form class="q-px-sm q-pt-xl" @submit="onSubmit">
 							<q-input
 								 ref="username"
 								 v-model="state.username"
 								 square
 								 clearable
 								 lazy-rules
-								 :rules="[required,short]"
+								 :rules="[required]"
 								 type="username" label="Пользователь"
 							>
 								<template #prepend>
@@ -40,18 +40,18 @@
 									/>
 								</template>
 							</q-input>
+
+								<q-btn
+									 type="submit"
+									 unelevated
+									 size="lg"
+									 color="secondary"
+									 class="full-width text-white q-mt-lg"
+									 label="Вход" @click="submit"
+								/>
+
 						</q-form>
 					</q-card-section>
-
-					<q-card-actions class="q-px-lg">
-						<q-btn
-							 unelevated
-							 size="lg"
-							 color="secondary"
-							 class="full-width text-white q-mt-sm"
-							 label="Вход" @click="submit"
-						/>
-					</q-card-actions>
 				</q-card>
 			</div>
 		</div>
@@ -98,8 +98,13 @@
 	let password = ref(0)
 	let form = ref(false)
 
-	let submit = async () => {
+	function onSubmit() {
 
+		console.log('submit')
+	}
+
+	let submit = async () => {
+		console.log('submit')
 		password.value.validate()
 		if (password.value.hasError) {
 			console.warn('в пароле есть ошибки (')
@@ -124,7 +129,7 @@
 		state.visibilityIcon = state.visibility ? 'visibility_off' : 'visibility'
 	}
 
-	onMounted(async() => {
+	onMounted(async () => {
 		let token = $q.cookies.get(VITE_token_name)
 		if (token) {
 			let transport = new Transport()
