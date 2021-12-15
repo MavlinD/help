@@ -73,5 +73,6 @@ if [ $UID -ne 0 ]; then
   alias rel="source ~/.bashrc"
 fi
 
-# export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history
-export PROMPT_COMMAND='history -a' && export HISTFILE=/home/appuser/.bash_history
+# имя пользователя можно установить в докер-композе
+appuser="${appuser:-appuser}"
+export PROMPT_COMMAND='history -a' && export HISTFILE=/home/"$appuser"/.bash_history
