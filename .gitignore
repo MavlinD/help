@@ -31,5 +31,6 @@ COMMANDS.md
 
 /client/.pnpm-store/
 /client/dist/
-*/.bash_history
+# нужны в докер-композах
+#*/.bash_history
 
