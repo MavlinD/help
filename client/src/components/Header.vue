@@ -12,7 +12,7 @@
 			/>
 			<router-link :to="{name:'home'}" class="text-decoration-none">
 				<q-btn v-if="$q.screen.gt.xs" flat no-caps no-wrap class="q-ml-xs">
-					<q-icon :name="fasBomb" color="accent" size="28px" />
+					<q-icon name="support" color="accent" size="28px" />
 					<q-toolbar-title shrink class="text-weight-bold">
 						FAQ MacroBank v.3
 					</q-toolbar-title>

@@ -3,12 +3,18 @@
     "selected": 1
   },
   "1 error pnpm": {
-    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "errno": 1,
+    "code": "ELIFECYCLE",
+    "pkgid": "blog-engine@1.0.0",
+    "stage": "web",
+    "script": "npm client/package.json dev",
+    "pkgname": "blog-engine",
     "err": {
       "name": "pnpm",
-      "message": "No package.json (or package.yaml, or package.json5) was found in \"/home/mdv/Documents/Projects/help\".",
-      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
-      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/home/mdv/Documents/Projects/help\".\n    at readProjectManifest (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40466:13)\n    at async Object.readProjectManifestOnly (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40470:28)\n    at async Object.readProjectManifestOnly (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:40689:24)\n    at async Object.handler (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:129525:24)\n    at async /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133699:20\n    at async run (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133674:34)\n    at async runPnpm (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133884:5)\n    at async /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:133876:7"
+      "message": "blog-engine@1.0.0 web: `npm client/package.json dev`\nExit status 1",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: blog-engine@1.0.0 web: `npm client/package.json dev`\nExit status 1\n    at EventEmitter.<anonymous> (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:104900:20)\n    at EventEmitter.emit (events.js:315:20)\n    at ChildProcess.<anonymous> (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:92889:18)\n    at ChildProcess.emit (events.js:315:20)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
     }
-  }
+  },
+  "2 warn pnpm:global": " Local package.json exists, but node_modules missing, did you mean to install?"
 }

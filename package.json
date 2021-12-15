@@ -1,0 +1,10 @@
+{
+	"name": "blog-engine",
+	"version": "1.0.0",
+	"description": "блог модуль для интеграции",
+	"main": "index.js",
+	"scripts": {
+		"web": "pnpm -C client dev"
+	},
+	"author": "mdv"
+}
