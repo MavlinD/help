@@ -33,4 +33,5 @@ COMMANDS.md
 /client/dist/
 # нужны в докер-композах
 #*/.bash_history
+!.env.development.template
 
