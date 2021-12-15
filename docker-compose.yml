@@ -47,8 +47,8 @@ services:
     profiles: [ web ]
     build: ./nginx
     restart: unless-stopped
-    hostname: web
-    container_name: web
+    hostname: web${suffix}
+    container_name: web${suffix}
     env_file: [ .env, .env.production ]
     environment:
       - app_int_port
