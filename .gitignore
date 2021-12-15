@@ -31,3 +31,5 @@ COMMANDS.md
 
 /client/.pnpm-store/
 /client/dist/
+*/.bash_history
+

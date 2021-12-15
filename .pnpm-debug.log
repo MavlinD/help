@@ -1,23 +1,20 @@
 {
   "0 debug pnpm:scope": {
-    "selected": 1
+    "selected": 1,
+    "workspacePrefix": "/home/mdv/Documents/Projects/help"
   },
-  "1 info pnpm": {
-    "err": {
-      "name": "Error",
-      "message": "not found: web",
-      "code": "ENOENT",
-      "stack": "Error: not found: web\n    at getNotFoundError (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:47780:51)\n    at Function.whichSync [as sync] (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:47857:13)\n    at getCommandAbsolutePathSync (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:49422:44)\n    at Object.default_1 [as default] (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:49431:32)\n    at /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:129761:34"
-    }
-  },
-  "2 error pnpm": {
-    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
-    "prefix": "/home/mdv/Documents/Projects/help",
+  "1 error pnpm": {
+    "errno": 1,
+    "code": "ELIFECYCLE",
+    "pkgid": "blog-engine@1.0.0",
+    "stage": "dev",
+    "script": "pnpm -C client dev",
+    "pkgname": "blog-engine",
     "err": {
       "name": "pnpm",
-      "message": "not found: web",
-      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
-      "stack": "Error: not found: web\n    at getNotFoundError (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:47780:51)\n    at Function.whichSync [as sync] (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:47857:13)\n    at getCommandAbsolutePathSync (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:49422:44)\n    at Object.default_1 [as default] (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:49431:32)\n    at /home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:129761:34"
+      "message": "blog-engine@1.0.0 dev: `pnpm -C client dev`\nExit status 1",
+      "code": "ELIFECYCLE",
+      "stack": "pnpm: blog-engine@1.0.0 dev: `pnpm -C client dev`\nExit status 1\n    at EventEmitter.<anonymous> (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:104900:20)\n    at EventEmitter.emit (events.js:315:20)\n    at ChildProcess.<anonymous> (/home/mdv/.nvm/versions/node/v14.16.0/lib/node_modules/pnpm/dist/pnpm.cjs:92889:18)\n    at ChildProcess.emit (events.js:315:20)\n    at maybeClose (internal/child_process.js:1048:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:288:5)"
     }
   }
 }

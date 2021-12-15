@@ -6,9 +6,8 @@
 	"author": "mdv",
 	"scripts": {
 		"dev": "vite",
-		"dev:local": "vite --mode development",
-		"build": "cross-env NODE_ENV=production vite build",
-		"serve": "cross-env NODE_ENV=production vite preview"
+		"build": "vite build",
+		"serve": "vite preview"
 	},
 	"dependencies": {
 		"@quasar/extras": "^1.12.1",
@@ -73,7 +72,7 @@
 		]
 	},
 	"engines": {
-		"node": ">=14.0.0"
-	},
-	"packageManager": "pnpm"
+		"node": ">=14",
+		"pnpm": ">=6"
+	}
 }

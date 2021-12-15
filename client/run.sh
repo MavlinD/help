@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# этот ф-л запустит сервис jsm
 # echo "$PWD"
 # echo "$NODE_ENV"
 

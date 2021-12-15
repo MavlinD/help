@@ -1,6 +1,6 @@
 ## HELP Service
 
-#### Использует:
+#### Использует
 
 - Django 3
 - django-rest-framework (RESTFull API)
@@ -11,24 +11,31 @@
 - Vite & Rollback
 - Nginx & [Gunicorn](https://gunicorn.org/)
 
-#### Запуск
+#### Deploy
 
-- клонировать
-- создать venv
-- установить зависимости
-- python3 manage.py runserver
+1. Клонируем код
+2. заполняем env.production и .env по шаблону
+3. docker-compose up jsm (dcup jsm) - устанавливаем зависимости и собираем клиентскую часть. Если меняются переменные окружения, то необходимо пересобрать сборку, тк сборщик использует статическую интерполяцию переменных окружения, короче они вставляются в код как есть, а не в виде ссылок.
+4. dcup - запускаем проект.
+
+#### Локальный запуск
+
+1. клонировать
+2. pnpm i (pi) - установка зависимостей
+3. заполняем env.development по шаблону
+4. запустить [бекенд](server/README.md) локально или установить ссылку в env.development, переменная VITE_api_server_name
+5. p dev - запустить клиента
 
 #### Docker
 
 - код работает в двух контейнерах
 - данные (БД, загружаемые изображения) вынесены в папку /dbs
 
-### Замечания к проекту
+### Сервисные команды
 
-- python -m pip --version
 - python3 -m pip install --upgrade pip - если зависимости не устанавливаются
-- собрать статику
-- pm collectstatic
+- pm collectstatic - собрать статику
+- git rm --cached client/.bash_history - удалить ф-л из индекса
 
 ### Tests & Scripts
 
