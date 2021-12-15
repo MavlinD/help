@@ -4,7 +4,7 @@ services:
   jsm:
     build: .
     container_name: jsm${suffix}
-    hostname: jsm
+    hostname: jsm${suffix}
     # запустится в контексте WORKDIR
     command: bash client/run.sh
     tty: true
