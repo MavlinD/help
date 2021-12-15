@@ -113,7 +113,7 @@
 			 }
 		)
 		let resp = req.data
-		$q.cookies.set(VITE_token_name, resp.key, { expires: 10 }) // in 10 days
+		$q.cookies.set(VITE_token_name, resp.key, { path: '/', expires: 10 }) // in 10 days
 		$q.localStorage.set('user', resp)
 		await router.replace({ path: String(route.query.from) })
 
