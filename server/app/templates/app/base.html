@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Django-rest-auth demo">
+		<link rel="icon" href="{% static 'favicon.png' %}">
+
+		<title>REPORT Service</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" type="text/css" href="{% static '/app/main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static '/app/help.css' %}">
+	</head>
+
+	<body role="document">
+
+	<div class="navbar navbar-inverse rounded-0" role="navigation">
+		<div class="container">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">API endpoints <span class="caret"></span></a>
+
+					<ul class="dropdown-menu" role="menu">
+						<!-- these pages don't require user token -->
+						<li><a href="{% url 'login' %}">Login</a></li>
+{#						<li><a href="{% url 'reports' %}">reports</a></li>#}
+					</ul>
+				</li>
+			</ul>
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Home</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					{#                <li class="active"><a href="/">Demo</a></li>#}
+					<li><a target="_blank" href="http://django-rest-auth.readthedocs.org/en/latest/">Documentation</a>
+					</li>
+					<li class=""><a href="{% url 'admin:index' %}">Admin</a></li>
+{#					<li class=""><a href="{% url 'reports' %}">Reports</a></li>#}
+					<li class=""><a href="{% url 'help' %}">Help</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+
+
+	<div class="container theme-showcase jumbotron" role="main">
+		{% block content %}{% endblock %}
+	</div>
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+		var error_response = function (data) {
+			$('.api-response').html('API Response: ' + data.status + ' ' + data.statusText + '<br/>Content: ' + data.responseText)
+		}
+		var susccess_response = async function (data) {
+			let { href, access } = data
+			$('.api-response').html(`${JSON.stringify(data)}`)
+			if (!href) return
+			let file = await fetch(href, {
+				headers: {
+					Authorization: `Bearer ${access}`,
+				},
+			})
+
+			let _file = await file.arrayBuffer()
+
+			const byteArray = new Uint8Array(_file);
+
+			const save = document.createElement('a');
+			if (typeof save.download !== 'undefined') {
+				// if the download attribute is supported, save.download will return empty string, if not supported, it will return undefined
+				// if you are using helper method, such as isNone in ember, you can also do isNone(save.download)
+				save.href = window.URL.createObjectURL(
+						new Blob([byteArray], {
+							type:
+									'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+						}),
+				);
+				save.target = '_blank';
+				save.download = href.slice(href.lastIndexOf('/') + 1);
+				save.dispatchEvent(new MouseEvent('click'));
+			} else {
+				window.location.href = href; // so that it opens new tab for IE11
+			}
+		}
+
+		$().ready(function () {
+			$('form.ajax-post button[type=submit]').click(function () {
+				var form = $('form.ajax-post')
+				var dataForm = form.serializeArray();
+				var data = {};
+				$.each(dataForm,
+						(i, v) => {
+							data[v.name] = v.value;
+						});
+				$.ajax({
+					'type': 'POST', url: form.attr('action'),
+					contentType: 'application/json; charset=utf-8',
+					headers: {
+						Authorization: `Bearer ${data.access}`,
+					},
+					data: JSON.stringify(data)
+				})
+						.fail(function (data) {error_response(data)})
+						.done(function (data) {susccess_response(data)})
+				return false
+			})
+		})
+	</script>
+	{% block script %}{% endblock %}
+	</body>
+</html>

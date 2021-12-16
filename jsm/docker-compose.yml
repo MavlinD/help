@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  jsm:
+    build: .
+    container_name: jsm${suffix}
+    hostname: jsm${suffix}
+    # запустится в контексте WORKDIR
+    command: bash client/run.sh
+    tty: true
+    environment:
+        # только для bashhistory
+      - appuser=node
+    volumes:
+        #  том с клиентскими исходниками, сюда же размещаются зависимости
+      - type: bind
+        source: ../client
+        target: /home/node/client
+
+        # история команд, для отладки
+      - type: bind
+        source: ./.bash_history
+        target: /home/node/.bash_history
+
+        # настройки пользователя внутри контейнера, для отладки
+      - type: bind
+        source: ../.bashrc
+        target: /home/node/.bashrc

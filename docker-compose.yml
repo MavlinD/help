@@ -1,0 +1,93 @@
+version: "3.9"
+
+services:
+
+  # сервис для сборки проекта на хостинге
+  jsm:
+    profiles: [ jsm ]
+    extends:
+      service: jsm
+      file: jsm/docker-compose.yml
+    env_file: [ .env.production ]
+
+  core:
+    profiles: [ core ]
+    extends:
+      service: core
+      file: server/docker-compose.yml
+
+    env_file: [ .env, .env.production ]
+    networks:
+      - $NET_NAME
+
+    volumes:
+      - ./client/package.json:/home/appuser/client/package.json
+
+        # история команд, для отладки
+      - type: bind
+        source: ./server/.bash_history
+        target: /home/appuser/.bash_history
+
+        # настройки пользователя внутри контейнера, для отладки
+      - type: bind
+        source: .bashrc
+        target: /home/appuser/.bashrc
+
+        # БД бекенда
+      - type: bind
+        source: ./dbs/db.sqlite3
+        target: /home/appuser/dbs/db.sqlite3
+
+        # бекенду нужно знать куда складывать загруженные изображения
+      - type: bind
+        source: ./dbs/media
+        target: /home/appuser/dbs/media
+
+  web:
+    profiles: [ web ]
+    build: ./nginx
+    restart: unless-stopped
+    hostname: web${suffix}
+    container_name: web${suffix}
+    env_file: [ .env, .env.production ]
+    environment:
+      - app_int_port
+    ports:
+        # публикация фронтенда
+      - ${app_ext_port:-9200}:${app_int_port:-8200}
+        # публикация бекенда
+      - ${VITE_api_ext_port:-9250}:${api_int_port:-8000}
+
+    networks:
+      - $NET_NAME
+
+    volumes:
+
+      # история команд, для отладки
+      - type: bind
+        source: ./nginx/.bash_history
+        target: /home/appuser/.bash_history
+
+      # настройки пользователя внутри контейнера, для отладки
+      - type: bind
+        source: .bashrc
+        target: /home/appuser/.bashrc
+
+        # папка со статикой от бекенда, для админки
+      - type: bind
+        source: ./server/app/static
+        target: /home/appuser/src/app/static
+
+        # папка со сборкой фронта
+      - type: bind
+        source: ./client/dist
+        target: /home/appuser/src/app/dist
+
+        # папка с сохраненными изображениями
+      - type: bind
+        source: ./dbs/media
+        target: /home/appuser/src/app/media
+
+networks:
+  mbank:
+    name: $NET_NAME

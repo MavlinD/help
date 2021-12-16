@@ -1,0 +1,10 @@
+#**
+#!app
+#!accounts
+#!pages
+#!manage.py
+#!req.txt
+#!__init__.py
+#!run.sh
+app/db.sqlite3
+app/media

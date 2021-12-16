@@ -1,0 +1,32 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+    <div class="row">
+        <h3>Users</h3>
+        <hr/>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>email</th>
+                <th>phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>
+                        <a href="{{ user.get_absolute_url }}">
+                            {{ user.username }}
+                        </a>
+                    </td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.profile.phone }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

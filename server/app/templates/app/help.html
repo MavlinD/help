@@ -1,0 +1,72 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="jumbotron help">
+        <header>
+            <h3>Предоставляет два способа удостоверения пользователя</h3>
+            <ol>
+                <li>
+                    <a href="javascript:void(0);">JWT</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Basic auth</a>
+                </li>
+                <li>
+                    <a href="#api_endpoints">API Endpoints</a>
+                </li>
+                <li>
+                    <a href="#police_of_security">Политика безопасности в отношении пароля</a>
+                </li>
+            </ol>
+        </header>
+        <h3 class="mt-3">Примеры запросов</h3>
+        <h3 id="api_endpoints" class="endpoints-head mt-3">API Endpoints</h3>
+        <div class="endpoints-wrap">
+            <table class="table table-striped endpoints-table">
+                <thead>
+                <tr>
+                    <th>Тип</th>
+                    <th>Адрес</th>
+                    <th>Параметры</th>
+                    <th>Ответ, пример</th>
+                    <th>Описание</th>
+                    <th>Разрешения</th>
+                </tr>
+                </thead>
+                <tbody class="endpoints">
+                <tr>
+{#                    <td><span class="endpoints_first">GET</span></td>#}
+{#                    <td><a href="{% url 'groups_with_users' %}">{% url 'groups_with_users' %}</a></td>#}
+{#                    <td></td>#}
+{#                    <td>{'testGroup': {'id': 1, 'users': [{'user_id': 1, 'username': 'user', 'phone': 8885552277},#}
+{#                        {'user_id': 2, 'username': 'test2'}, {'user_id': 3, 'username': 'test3'}]}, 'testGroup2': {'id':#}
+{#                        2, 'users': [{'user_id': 2, 'username': 'test2'}]}}#}
+{#                        <div class="text-warning">состав полей может меняться</div>#}
+{#                    </td>#}
+{#                    <td class="link">Список пользователей в разрезе групп</td>#}
+{#                    <td>staff only</td>#}
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul>
+            <li class="description"><span class="text-info">staff</span> - любой юзер с правом входа в админ часть,
+                сейчас это только админы, но можно предоставить право входа любому, что, однако, не даст ему админских
+                прав.
+            </li>
+            <li class="description">вместо имени для входа можно юзать емейл.</li>
+        </ul>
+        <h3 id="police_of_security">Политика безопасности в отношении пароля</h3>
+        <ol>
+            <li class="description">Минимальная длина - 6 символов</li>
+            <li class="description">Пароль не может состоять только из цифр.</li>
+            <li class="description">Пароль не должен быть слишком похож на другие атрибуты. К-т совпадения - 0.7, чтобы
+                это не значило.
+            </li>
+            <li class="description">Слишком простой и часто используемый пароль. Джанго сверяет пароль со своей БД в
+                которой около 20000 простых паролей.
+            </li>
+        </ol>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  core:
+    build: .
+    hostname: ${core_host_name:-core}${suffix}
+    container_name: core${suffix}
+    tty: true
+    environment:
+      - TERM=xterm-256color
+    volumes:
+
+      - type: bind
+        source: .
+        target: /home/appuser/src

@@ -1,0 +1,6 @@
+# https://docs.docker.com/engine/reference/builder/#dockerignore-file
+# применяется к контексту сборки
+#**
+.pnpm-store
+node_modules
+dist
