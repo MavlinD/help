@@ -24,8 +24,8 @@
 					<q-spinner-facebook/>
 				</template>
 			</q-btn>
-		</div>
 		<slot name="delete"/>
+		</div>
 		<div class="q-pa-md q-gutter-sm">
 			<editor :key="hex(body)" :editor-build="bodyEditor" :content="body" @saveContent="saveBody"
 					  @input="btnStateChange"/>
