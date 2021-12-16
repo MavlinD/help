@@ -20,6 +20,6 @@ export function Store() {
 			articles,
 			categories
 		},
-		strict: VITE_debugging
+		strict: !!VITE_debugging
 	})
 }

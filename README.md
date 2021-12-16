@@ -37,6 +37,4 @@
 - ```pm collectstatic``` - собрать статику
 - ```git rm --cached client/.bash_history``` - удалить ф-л из индекса
 
-### Tests & Scripts
-
-[тесты](./README-TESTS.md)
+### [Tests & Scripts](./README-TESTS.md)

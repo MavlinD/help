@@ -4,13 +4,12 @@ import {trycatch} from '@/javascript-decorators'
 import {myNotify} from '@/components/basis'
 
 const {VITE_token_name, VITE_api_server_name, VITE_api_ext_port} = import.meta.env
-
 /**
  * примесь всех экшен классов стора
  */
 export class Transport {
 
-	token = Cookies.get(VITE_token_name)
+	token = Cookies.get(String(VITE_token_name))
 
 	transport = axios.create({
 		baseURL: `http://${VITE_api_server_name}:${VITE_api_ext_port}/api/`,
@@ -23,7 +22,7 @@ export class Transport {
 	 * авторизует, запросы PUT, PATCH, DELETE авторизованы по умолчанию
 	 */
 	authorize(){
-		this.transport.defaults.headers.Authorization = `token ${this.token}`
+		this.transport.defaults.headers['Authorization'] = `token ${this.token}`
 	}
 
 	before(){

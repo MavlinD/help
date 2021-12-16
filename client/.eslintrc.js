@@ -35,17 +35,8 @@ module.exports = {
 			// { "overrides": { "+=": "before" } }
 		],
 		'global-require': 1,
-		'import/no-unresolved': 1,
-		'import/extensions': [
-			'error',
-			'ignorePackages',
-			{
-				ts: 'never',
-				js: 'never',
-				// jsx: 'never',
-				// vue: 'never',
-			},
-		],
+		'import/no-unresolved': 0,
+		'import/extensions': 0,
 		'import/prefer-default-export': 'off',
 		'import/no-extraneous-dependencies': 'off',
 		'object-curly-newline': [
