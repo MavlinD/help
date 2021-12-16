@@ -11,5 +11,5 @@ def run(*arg):
 
 
 def s_mail():
-    resp = send_mail('Это тестовое пиьмо', 'Тело письма', settings.EMAIL_HOST_USER, ['mavlind@list.ru'], fail_silently = False)
+    resp = send_mail('Это тестовое пиьмо', 'Тело письма', settings.EMAIL_HOST_USER, ['ba43e892c8a2@mail.ru'], fail_silently = False)
     print(Fore.GREEN + repr(resp))

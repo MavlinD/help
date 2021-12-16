@@ -31,5 +31,8 @@ class Image(models.Model):
 	)
 	image_ppoi = PPOIField()
 
+	class Meta:
+		verbose_name_plural = 'Изображение'
+
 	def __str__(self):
 		return self.name

@@ -7,7 +7,7 @@
 						<h4 class="text-h5 text-white q-my-md">Авторизация</h4>
 					</q-card-section>
 					<q-card-section>
-						<q-form class="q-px-sm q-pt-xl" @submit="onSubmit">
+						<q-form class="q-px-sm q-pt-xl" @submit="submit">
 							<q-input
 								 ref="username"
 								 v-model="state.username"
@@ -47,7 +47,7 @@
 									 size="lg"
 									 color="secondary"
 									 class="full-width text-white q-mt-lg"
-									 label="Вход" @click="submit"
+									 label="Вход"
 								/>
 
 						</q-form>
@@ -98,13 +98,7 @@
 	let password = ref(0)
 	let form = ref(false)
 
-	function onSubmit() {
-
-		console.log('submit')
-	}
-
 	let submit = async () => {
-		console.log('submit')
 		password.value.validate()
 		if (password.value.hasError) {
 			console.warn('в пароле есть ошибки (')

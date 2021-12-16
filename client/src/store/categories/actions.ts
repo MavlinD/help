@@ -1,6 +1,5 @@
 import {Transport} from '@/store/lib'
 
-
 /**
  * получает все категории
  * @param context

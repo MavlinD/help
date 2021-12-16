@@ -16,13 +16,9 @@
 
 <script setup>
 	import moment from 'moment/moment'
-	import {useStore} from 'vuex'
-	import {useRouter} from 'vue-router'
 
 	defineProps({
 		list: Array
 	})
-	let store = useStore()
-	let router = useRouter()
 
 </script>

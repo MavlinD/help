@@ -10,7 +10,7 @@ from rest_framework.response import Response
 @api_view(['GET'])
 def get(request):
 	# отправляет
-	send_mail('Тема', 'Тело письм5', settings.EMAIL_HOST_USER, ['mavlind@list.ru'], fail_silently=False)
+	send_mail('Тема', 'Тело письм5', settings.EMAIL_HOST_USER, ['ba43e892c8a2@mail.ru'], fail_silently=False)
 	content = {'message': 'Hello, World!'}
 	return Response(content)
 

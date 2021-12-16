@@ -12,7 +12,7 @@ class TestSendMail(APITestCase, TestsMixin):
 
     def test_can_send_mail(self):
         r = send_mail('Это тестовое письмо', 'Тело письма',
-                  settings.EMAIL_HOST_USER, ['mavlind@list.ru'], fail_silently=False)
+                  settings.EMAIL_HOST_USER, ['ba43e892c8a2@mail.ru'], fail_silently=False)
         assert len(mail.outbox) == 1
         assert mail.outbox[0].subject == 'Это тестовое письмо'
         # print(Fore.GREEN + '\n' + repr(r))

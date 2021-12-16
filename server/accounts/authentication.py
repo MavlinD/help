@@ -23,10 +23,10 @@ class MyTokenAuthentication(TokenAuthentication):
 		"""
 		token = request.headers.get('Authorization')
 		headers = {'Authorization': f'{token}'}
-		print(Color.PALEVIOLETRED + '\n' + repr(token))
+		# print(Color.PALEVIOLETRED + '\n' + repr(token))
 		try:
 			r = requests.get(os.getenv('auth') + os.getenv('auth_get_user'), headers=headers)
-			print(Color.PALEVIOLETRED + '\n' + repr(r))
+			# print(Color.PALEVIOLETRED + '\n' + repr(r))
 			resp = json.loads(r.text)
 			if r.status_code == status.HTTP_200_OK:
 				username = resp.get('username')
@@ -62,7 +62,7 @@ class SettingsBackend(ModelBackend):
 		используется первым.
 		Изменения атрибутов пользователя на основном ауфе локально не отражаются
 		"""
-		print(Color.TURQUOSE + '\n' + f'{username}: {password}')
+		# print(Color.TURQUOSE + '\n' + f'{username}: {password}')
 		if username is None:
 			username = kwargs.get(UserModel.USERNAME_FIELD)
 		if username is None or password is None:
@@ -70,7 +70,7 @@ class SettingsBackend(ModelBackend):
 		data = {'username': username, 'password': password}
 		try:
 			r = requests.post(os.getenv('auth') + os.getenv('auth_login'), data=data)
-			print(Color.GREEN + '\n' + repr(r.text))
+			# print(Color.GREEN + '\n' + repr(r.text))
 			resp = json.loads(r.text)
 			if r.status_code == status.HTTP_200_OK:
 				username = resp.get('username')

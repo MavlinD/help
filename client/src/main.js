@@ -1,5 +1,5 @@
 import {createApp} from 'vue'
-import {Quasar, Cookies, useQuasar, LoadingBar, LocalStorage, QEditor, Notify} from 'quasar'
+import {Quasar, Cookies, LoadingBar, LocalStorage, QEditor, Notify} from 'quasar'
 import quasarLang from 'quasar/lang/ru'
 import {router as createRouter, routerGuard} from './router'
 import {Store} from './store'

@@ -105,7 +105,7 @@ VERSATILEIMAGEFIELD_SETTINGS = {
 	'progressive_jpeg': False
 }
 
-SITE_NAME = "macrobank-help"
+SITE_NAME = "help-engine"
 ROOT_HOSTCONF = 'mysite.hosts'
 DEFAULT_HOST = 'www'
 DOMAIN = 'www'
@@ -186,7 +186,7 @@ TINYMCE_DEFAULT_CONFIG = {
 				  "removeformat | help",
 }
 # https://docs.djangoproject.com/en/3.2/ref/settings/
-ADMINS = [('Mavlin', 'mavlind@list.ru')]
+ADMINS = [('Mavlin', 'ba43e892c8a2@mail.ru')]
 
 ABSOLUTE_URL_OVERRIDES = {
 	'auth.user': lambda o: "/user/%s/" % o.id,

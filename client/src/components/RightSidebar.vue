@@ -76,8 +76,4 @@
 		],
 	})
 
-	// onMounted(()=>{
-	// 	console.log(document.location)
-	// })
-
 </script>

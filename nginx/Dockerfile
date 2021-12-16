@@ -4,7 +4,6 @@ RUN rm /etc/nginx/nginx.conf
 COPY nginx.conf.template /etc/nginx/nginx.conf
 COPY proxy.conf /etc/nginx/
 RUN rm /etc/nginx/conf.d/default.conf
-#COPY app.conf.template /etc/nginx/templates/
 
 # for dev
 RUN curl https://getmic.ro | bash
@@ -13,7 +12,6 @@ RUN mv micro /usr/bin
 ARG USERNAME=appuser
 RUN useradd --create-home $USERNAME
 
-#COPY ./../.bashrc /root
 # После запуска контейнера nginx считывает файлы шаблонов,
 # расположенные в /etc/nginx/templates/*.templates,
 # и вызывает envsubstr, который считывает сохраненные переменные среды.

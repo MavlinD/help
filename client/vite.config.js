@@ -10,7 +10,6 @@ const locals = { name: "My Pug" }
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
-		// vue(),
 		vue({template: {
 				transformAssetUrls,
 				// compilerOptions: {
@@ -20,10 +19,7 @@ export default defineConfig({
 		quasar({
 			autoImportComponentCase: 'combined',
 			sassVariables: 'src/quasar-variables.sass',
-			plugins:[
-				// 'Cookies'
-				// Notify
-			]
+			plugins:[]
 		}),
 		pugPlugin(options, locals),
 		babel({
@@ -39,7 +35,7 @@ export default defineConfig({
 		}
 	},
 	build: {
-		minify: false,
+		minify: true,
 	},
 
 })

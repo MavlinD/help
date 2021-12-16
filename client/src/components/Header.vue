@@ -14,7 +14,7 @@
 				<q-btn v-if="$q.screen.gt.xs" flat no-caps no-wrap class="q-ml-xs">
 					<q-icon name="support" color="accent" size="28px" />
 					<q-toolbar-title shrink class="text-weight-bold">
-						FAQ MacroBank v.3
+						{{VITE_app_name}}
 					</q-toolbar-title>
 				</q-btn>
 			</router-link>
@@ -83,13 +83,15 @@
 </template>
 
 <script setup>
-	import {computed, onMounted, reactive, ref} from 'vue'
+	import {computed, ref} from 'vue'
 	import {useStore} from 'vuex'
 	import {fasPlusCircle} from '@quasar/extras/fontawesome-v5'
 	import {useQuasar} from 'quasar'
 	import {logout} from '@/components/basis'
 	import {isStaff} from '@/middleware'
 	import {useRouter} from 'vue-router'
+
+	const { VITE_app_name } = import.meta.env
 
 	let router = useRouter()
 	let store=useStore()
